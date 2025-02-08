@@ -1,9 +1,13 @@
 const express = require("express");
+const cors = require("cors");
 const multer = require("multer");
 const Tesseract = require("tesseract.js");
 
 const app = express();
 const PORT = 9001;
+
+// Enable CORS
+app.use(cors());
 
 // Multer setup for file upload
 const storage = multer.memoryStorage();
